@@ -32,6 +32,7 @@ When("I click {string}") do |string|
   click_on string
 end
 
+
 Then("show me the page") do
   save_and_open_page
 end

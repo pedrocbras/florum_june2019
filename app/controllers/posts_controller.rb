@@ -15,15 +15,28 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
   def create
     @post = current_user.posts.create(post_params)
-
     if @post.persisted?
       flash[:notice] = 'Your post was successfully created'
       redirect_to posts_path
     else
       flash[:alert] = 'Invalid Title or Text.'
       redirect_to new_post_path
+    end
+  end
+
+  def update
+    @post = Post.find(params[:id])
+   
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render 'edit'
     end
   end
 
@@ -38,7 +51,7 @@ class PostsController < ApplicationController
   end
 
   private
-
+  
   def post_owner
     @post.user.id == current_user.id
   end
