@@ -12,7 +12,6 @@ I would like the ability to edit them"
     | title        | text          | user     |
     | Codeacademy  | Smooth-ride   | Fat Bob  |
     
-   
   Scenario: Reader can edit his own posts
     When I am logged in as "Fat Bob"  
     And I visit the site
