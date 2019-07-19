@@ -32,6 +32,10 @@ When("I click {string}") do |string|
   click_on string
 end
 
+When("I click on {string} on post") do |button|
+click_on button
+end
+
 
 Then("show me the page") do
   save_and_open_page
