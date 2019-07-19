@@ -1,72 +1,109 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+/* -------------- MAIN --------------*/
 
 body {
   font-family: 'Playfair Display';font-size: 22px;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
-
-#fixed-nav-bar li {
-  display: inline;
+h1, h2, h3, h4 {
+  margin: 0px;
+  padding: 20px;
 }
-
-#fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+.container {
+  margin: auto;
+  padding-top: 20px;
+  width: 80%;
+}
+.florum-logo-div {
+  height: 400px;
   width: 100%;
-  height: 50px;
-  background-color: #00CC66;
-  padding-bottom: 20px;
+  padding: 0px;
+  margin: 0;
+  background-color: floralwhite;
+}
+.about-us-div {
+  height: 300px;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  background-color: #eaffea;
+  overflow-wrap: break-word;
+}
+.about-us-div p {
+  padding: 10px;
+}
+.marketplace-div {
+  height: 400px;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  background-color: #F8F8F8;
+}
+.col1, .col2, .col3 {
+  width: 33%;
+  font-size: 14px;
+  text-align: center;
+  margin: 0px;
+  display: inline-block;
+}
+.col1 p, .col2 p, .col3 p {
+  padding: 10px;
 }
 
-#fixed-nav-bar a:link { 
+
+/* -------------- NAV --------------*/
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #00CC66;
+  justify-content: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-item {
+  padding: 5px;
+}
+.navbar a:link { 
   color: black;
   text-decoration: none;
 }
-#fixed-nav-bar a:visited { 
+.navbar a:visited { 
   color: black;
   text-decoration: none;
 }
-#fixed-nav-bar a:hover { 
+.navbar a:hover { 
   color: white; 
   font-weight: bold;
 }
-#fixed-nav-bar a:active { 
+.navbar a:active { 
   color: black;
   text-decoration: none;
 }
+
+/* -------------- FORUM --------------*/
 
 .new-post {
   margin-top: 200px;
 }
 
-.profile {
-  margin-top: 200px;
-}
+/* -------------- USER PROFILE --------------*/
+
 
 #plants-list {
   text-align: left;
   font-size: 18px;
-  width: 80%;
-  margin-left: 100px;
 }
-
 .sub-plants {
   display: inline-block;
-  padding: 40px;
+  padding: 15px;
+  width: 225px;
+  vertical-align:top;
 }

@@ -1,32 +1,34 @@
-<h1> New Plant for Sale </h1>
+<div class="container">
+  <h1>New Plant for Sale </h1>
 
-<%= form_with model: @plant, local: true do |form| %>
-  <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name, placeholder: 'Plant name' %>
-  </div>
-   
-  <div>
-    <%= form.label :details %><br>
-    <%= form.text_area :details, placeholder: 'Describe your plant' %>
-  </div>
+  <%= form_with model: @plant, local: true do |form| %>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name, placeholder: 'Plant name' %>
+    </div>
+    
+    <div>
+      <%= form.label :details %><br>
+      <%= form.text_area :details, placeholder: 'Describe your plant' %>
+    </div>
 
-  <div>
-    <%= form.label :price %><br>
-    <%= form.text_area :price, placeholder: 'Price' %>
-  </div>
+    <div>
+      <%= form.label :price %><br>
+      <%= form.text_area :price, placeholder: 'Price' %>
+    </div>
 
-  <div>
-    <%= form.label :category %><br>
-    <%= form.text_area :category, placeholder: 'Category' %>
-  </div>
+    <div>
+      <%= form.label :category %><br>
+      <%= form.text_area :category, placeholder: 'Category' %>
+    </div>
 
-  <div>
-    <%= form.label :quantity %><br>
-    <%= form.text_area :quantity, placeholder: 'Quantity' %>
-  </div>
+    <div>
+      <%= form.label :quantity %><br>
+      <%= form.text_area :quantity, placeholder: 'Quantity' %>
+    </div>
 
-  <div>
-    <%= form.submit value: "Sell" %>
-  </div>
-<% end %>
+    <div>
+      <%= form.submit value: "Sell" %>
+    </div>
+  <% end %>
+</div>

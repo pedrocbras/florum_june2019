@@ -15,7 +15,7 @@ I would like the ability to edit them"
   Scenario: Reader can edit his own posts
     When I am logged in as "Fat Bob"  
     And I visit the site
-    And I click "FORUM"
+    And I click "FLORUM"
     And I click on "Open" 
     Then I should see "Author: Fat Bob"
     And I should see "Title: Codeacademy"
@@ -32,6 +32,6 @@ I would like the ability to edit them"
   Scenario: User can't delete other user's post
     When I am logged in as "Slim Jim" 
     And I visit the site
-    And I click "FORUM"
+    And I click "FLORUM"
     And I click on "Open" 
     Then I should not see "Edit"

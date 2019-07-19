@@ -1,6 +1,6 @@
-<div id="profile">
-  <h1><%= "#{@user.name}'s Profile Page" %></h1>
-  <ul>
+<div class="container">
+  <h2><%= "#{@user.name}'s Profile Page" %></h2>
+  <ul style="list-style: none">
     <li><%= "#{@user.about_me}" %></li>
     <li><%= "#{@user.location}" %></li>
     <li><%= "#{@user.fav_flora}" %></li>
@@ -10,19 +10,17 @@
   <%= link_to 'Sell plants', new_plant_path %>
 
   <div id="plants-list">
-  
-  <h3><%= "#{@user.name}'s Plants" %></h3>
-      <ul>
-        <% @user.plants.each do |plant| %>
-          <div class="sub-plants">
-          <h4 style="padding: 0px; margin: 0px"><%= plant.name %></h4>
-          <li><%= plant.details %></li>
-          <li><%= plant.price %> SEK</li>
-          <li>Quantity: <%= plant.quantity %></li>
-          <%= link_to 'Buy this plant!', '#' %>
-          <br>
-          </div>
-        <% end %>
-      </ul>
+    <ul>
+      <h3><%= "#{@user.name}'s Plants" %></h3>
+      <% @user.plants.each do |plant| %>
+        <div class="sub-plants">
+        <h4 style="padding: 0px; margin: 0px"><%= plant.name %></h4>
+        <li><%= plant.details %></li>
+        <li><%= plant.price %> SEK</li>
+        <li style="padding-bottom: 20px;">Quantity: <%= plant.quantity %></li>
+        <%= link_to 'Buy this plant!', '#' %>
+        </div>
+      <% end %>
+    </ul>
   </div>
 </div>

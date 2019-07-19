@@ -15,7 +15,7 @@ I would like to able to delete it."
   Scenario: User can delete his post
     When I am logged in as "Fat Bob"  
     And I visit the site
-    And I click "FORUM"
+    And I click "FLORUM"
     And I click "Delete"
     Then I should not see "Title: Codeacademy"
     And I should not see "Text: Smooth-ride" 
@@ -23,5 +23,5 @@ I would like to able to delete it."
   Scenario: User can't delete other user's post
     When I am logged in as "Slim Jim" 
     And I visit the site
-    And I click "FORUM"
+    And I click "FLORUM"
     Then I should not see "Delete"

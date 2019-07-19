@@ -9,7 +9,7 @@ Feature: Create posts
       | fatbob@gmail.com | ilovecatfood | Fat Bob |
     And I am logged in as 'fatbob@gmail.com'
     And I visit the site
-    And I click "FORUM"
+    And I click "FLORUM"
     And I click "New Post"
 
   Scenario: Visitor successfully creates a post
