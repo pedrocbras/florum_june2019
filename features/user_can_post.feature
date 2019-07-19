@@ -20,7 +20,7 @@ Feature: Create posts
     And I should see "Your post was successfully created"
     And I should see "Flower Power"
     And I should see "Flower Power to the people!!"
-    And I should see "Writen By"
+    And I should see "Written By"
     And I should see "Fat Bob"
 
   Scenario: Visitor doesn't enter a title or text for the post [Sad Path]

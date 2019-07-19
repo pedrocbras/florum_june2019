@@ -1,0 +1,20 @@
+<h1>Edit Post</h1>
+ 
+<%= form_with model: @post, local: true do |form| %>
+  
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, placeholder: 'Title' %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text, placeholder: 'Text' %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 

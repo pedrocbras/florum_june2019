@@ -1,5 +1,10 @@
 <div class="container">
   <p>
+    <strong>Author:</strong>
+    <%= @post.user.name %>
+  </p>
+
+  <p>
     <strong>Title:</strong>
     <%= @post.title %>
   </p>
@@ -8,6 +13,12 @@
     <strong>Text:</strong>
     <%= @post.text %>
   </p>
+  <td><%= link_to 'Back', posts_path %></td>
+  <% if @post.user.id == current_user.id %>
+      <td><%= link_to 'Edit', edit_post_path%></td>
+  <% end %>
+</div>
+
 
 <p>
   <strong>Author:</strong>
